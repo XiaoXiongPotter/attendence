@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+    <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_attendance})}|">Show Attendance - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${attendance}">
+        <div>
+
+          <!-- CONTENT -->
+            <div id="mainEntityFieldSet">
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="attendance-signin-field" data-z="d16f6814">
+            	      <strong data-th-text="#{label_attendance_signin}">signIn</strong>
+                    <span data-th-text="*{{signIn}}">signInValue</span>
+         	        </li>
+                  <li id="attendance-signout-field" data-z="5ccc48ea">
+            	      <strong data-th-text="#{label_attendance_signout}">signOut</strong>
+                    <span data-th-text="*{{signOut}}">signOutValue</span>
+         	        </li>
+                  <li id="attendance-ip-field" data-z="c63189d4">
+            	      <strong data-th-text="#{label_attendance_ip}">ip</strong>
+                    <span data-th-text="*{{ip}}">ipValue</span>
+         	        </li>
+                  <li id="attendance-staff-field" data-z="f8bf5dea">
+            	      <strong data-th-text="#{label_attendance_staff}">staff</strong>
+                    <span data-th-text="*{{staff}}">staffValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

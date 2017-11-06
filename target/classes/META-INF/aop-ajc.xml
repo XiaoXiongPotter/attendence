@@ -1,0 +1,63 @@
+<aspectj>
+<aspects>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesCollectionThymeleafLinkFactory_Roo_LinkFactory"/>
+<aspect name="com.hangsheng.kaoqin.domain.Staff_Roo_Equals"/>
+<aspect name="com.hangsheng.kaoqin.domain.Staff_Roo_JavaBean"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesCollectionThymeleafController_Roo_Thymeleaf"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesCollectionThymeleafController_Roo_Controller"/>
+<aspect name="com.hangsheng.kaoqin.web.StaffDeserializer_Roo_EntityDeserializer"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesSearchThymeleafLinkFactory_Roo_LinkFactory"/>
+<aspect name="com.hangsheng.kaoqin.config.SpringDataJpaDetachableRepositoryConfiguration_Roo_Jpa_Repository_Configuration"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesSearchJsonController_Roo_Controller"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesItemJsonController_Roo_Controller"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesItemThymeleafController_Roo_Controller"/>
+<aspect name="com.hangsheng.kaoqin.service.api.StaffService_Roo_Service"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesSearchJsonController_Roo_JSON"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesItemJsonController_Roo_JSON"/>
+<aspect name="com.hangsheng.kaoqin.domain.Attendance_Roo_Jpa_Entity"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesItemThymeleafController_Roo_Thymeleaf"/>
+<aspect name="com.hangsheng.kaoqin.web.StaffsItemThymeleafController_Roo_Thymeleaf"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesSearchJsonLinkFactory_Roo_LinkFactory"/>
+<aspect name="com.hangsheng.kaoqin.web.StaffsItemThymeleafLinkFactory_Roo_LinkFactory"/>
+<aspect name="com.hangsheng.kaoqin.service.impl.AttendanceServiceImpl_Roo_Service_Impl"/>
+<aspect name="com.hangsheng.kaoqin.domain.AttendanceStatBean_Roo_JavaBean"/>
+<aspect name="com.hangsheng.kaoqin.domain.Attendance_Roo_ToString"/>
+<aspect name="com.hangsheng.kaoqin.domain.AttendanceSignInFormBean_Roo_DTO"/>
+<aspect name="com.hangsheng.kaoqin.web.StaffsCollectionJsonController_Roo_JSON"/>
+<aspect name="com.hangsheng.kaoqin.web.StaffsItemJsonController_Roo_Controller"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendanceDeserializer_Roo_EntityDeserializer"/>
+<aspect name="com.hangsheng.kaoqin.config.jackson.DomainModelModule_Roo_DomainModelModule"/>
+<aspect name="com.hangsheng.kaoqin.repository.StaffRepository_Roo_Jpa_Repository"/>
+<aspect name="com.hangsheng.kaoqin.web.StaffsCollectionThymeleafController_Roo_Controller"/>
+<aspect name="com.hangsheng.kaoqin.service.impl.StaffServiceImpl_Roo_Service_Impl"/>
+<aspect name="com.hangsheng.kaoqin.domain.Staff_Roo_Jpa_Entity"/>
+<aspect name="com.hangsheng.kaoqin.web.StaffsItemThymeleafController_Roo_Controller"/>
+<aspect name="com.hangsheng.kaoqin.config.WebMvcConfiguration_Roo_ThymeleafUIConfiguration"/>
+<aspect name="com.hangsheng.kaoqin.repository.StaffRepositoryCustom_Roo_Jpa_Repository_Custom"/>
+<aspect name="com.hangsheng.kaoqin.repository.AttendanceRepositoryCustom_Roo_Jpa_Repository_Custom"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesSearchThymeleafController_Roo_Thymeleaf"/>
+<aspect name="com.hangsheng.kaoqin.domain.Staff_Roo_ToString"/>
+<aspect name="com.hangsheng.kaoqin.domain.Attendance_Roo_Equals"/>
+<aspect name="com.hangsheng.kaoqin.service.api.AttendanceService_Roo_Service"/>
+<aspect name="com.hangsheng.kaoqin.domain.AttendanceSignInFormBean_Roo_JavaBean"/>
+<aspect name="com.hangsheng.kaoqin.domain.AttendanceSignInAndSignOutFormBean_Roo_DTO"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesSearchThymeleafController_Roo_Controller"/>
+<aspect name="com.hangsheng.kaoqin.repository.AttendanceRepositoryImpl_Roo_Jpa_Repository_Impl"/>
+<aspect name="com.hangsheng.kaoqin.web.StaffsCollectionThymeleafController_Roo_Thymeleaf"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesCollectionJsonController_Roo_Controller"/>
+<aspect name="com.hangsheng.kaoqin.web.StaffsCollectionThymeleafLinkFactory_Roo_LinkFactory"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendanceJsonMixin_Roo_JSONMixin"/>
+<aspect name="com.hangsheng.kaoqin.web.MainController_Roo_Thymeleaf_MainController"/>
+<aspect name="com.hangsheng.kaoqin.repository.AttendanceRepository_Roo_Jpa_Repository"/>
+<aspect name="com.hangsheng.kaoqin.web.StaffsCollectionJsonController_Roo_Controller"/>
+<aspect name="com.hangsheng.kaoqin.domain.AttendanceStatBean_Roo_DTO"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesItemThymeleafLinkFactory_Roo_LinkFactory"/>
+<aspect name="com.hangsheng.kaoqin.domain.Attendance_Roo_JavaBean"/>
+<aspect name="com.hangsheng.kaoqin.web.StaffsItemJsonController_Roo_JSON"/>
+<aspect name="com.hangsheng.kaoqin.repository.StaffRepositoryImpl_Roo_Jpa_Repository_Impl"/>
+<aspect name="com.hangsheng.kaoqin.web.AttendancesCollectionJsonController_Roo_JSON"/>
+<aspect name="com.hangsheng.kaoqin.config.WebMvcConfiguration_Roo_WebMvcConfiguration"/>
+<aspect name="com.hangsheng.kaoqin.domain.AttendanceSignInAndSignOutFormBean_Roo_JavaBean"/>
+</aspects>
+</aspectj>
+

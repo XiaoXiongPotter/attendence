@@ -1,0 +1,147 @@
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-10-23 14:52:16
+project setup --topLevelPackage com.hangsheng.kaoqin --projectName "attendance" --java 8 --packaging WAR
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-10-23 14:52:17
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-10-23 14:52:19
+jpa setup --provider HIBERNATE --database MYSQL 
+// [failed] jpa setup --provider HIBERNATE --database MYSQL --databaseName attendance --userName root --password root
+jpa setup --provider HIBERNATE --database MYSQL --databaseName attendance --userName root --password root --force 
+entity jpa --class ~.domain.Staff 
+// [failed] field string --fieldName name --class ~.domain.Staff --notNull --sizeMax 10
+focus --class ~.domain.Staff
+// [failed] field string --fieldName name --class ~.domain.Staff --notNull --sizeMax 10
+field string --fieldName name --notNull --sizeMax 10
+field string --fieldName mobile --regexp ^1[3|4|5|7|8][0-9]{9}$ --notNull 
+field string --fieldName mac --notNull --sizeMax 17 --sizeMin 17
+entity jpa --class ~.domain.Attendance 
+field date --fieldName signIn --type java.util.Calendar --notNull --dateFormat MEDIUM 
+field date --fieldName signOut --type java.util.Calendar --dateFormat MEDIUM 
+field string --fieldName ip --notNull --regexp ((25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\.){3}(25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))
+repository jpa --all --package com.hangsheng.kaoqin.repository
+service --all --apiPackage ~.service.api --implPackage ~.service.impl
+web mvc setup
+web mvc view setup --type THYMELEAF 
+web mvc detail --all --views list,show --responseType THYMELEAF
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-10-23 16:06:21
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-10-23 16:06:29
+finder add --entity ~.domain.Staff --name findByMacAllIgnoreCase
+// [failed] finder add --entity ~.domain.Attendance --name findBySignOutIsNullAndStaff
+focus --class ~.domain.Staff
+field set --fieldName attendances --type ~.domain.Attendance
+finder add --entity ~.domain.Attendance --name findBySignOutIsNullAndStaff
+finder add --entity ~.domain.Attendance --name findBySignOutIsNull
+finder add --entity ~.domain.Attendance --name findBySignOutIsNullAndIp
+finder add --entity ~.domain.Attendance --name findBySignInAfterAndSignOutBefore
+dto --class ~.domain.AttendanceBeginTimeAndEndTimeFormBean
+field date --fieldName beginTime --type java.util.Calendar
+field date --fieldName endTime --type java.util.Calendar
+dto --class ~.domain.AttendanceSignInAndSignOutFormBean
+field date --fieldName signIn  --type java.util.Calendar
+field date --fieldName signOut --type java.util.Calendar
+// [failed] finder add --entity ~.domain.Attendance --name findBySignInAfterAndSignOutBefore --formBean 
+finder add --entity ~.domain.Attendance --name findBySignInAfterAndSignOutBefore --formBean ~.domain.AttendanceSignInAndSignOutFormBean
+finder add --entity ~.domain.Attendance --name findBySignInAfterAndSignOutBefore --formBean ~.domain.AttendanceSignInAndSignOutFormBean 
+finder add --entity ~.domain.Attendance --name findBySignInAfterAndSignOutBefore --formBean ~.domain.AttendanceSignInAndSignOutFormBean
+web mvc finder --all --responseType THYMELEAF
+web mvc detail --all --views list,show --responseType THYMELEAF
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-10-23 16:18:01
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-10-23 16:18:09
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-10-23 16:21:15
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-10-23 16:21:25
+dto --class ~.domain.AttendanceStatBean
+field date --fieldName beginTime --type java.util.Calendar
+field date --fieldName endTime --type java.util.Calendar
+field number --fieldName totalHours --type float
+field number --fieldName validHours --type float
+backup
+focus --class ~.domain.Staff
+// [failed] field string --fieldName name --class ~.domain.Staff --notNull --sizeMax 10
+field string --fieldName name --notNull --sizeMax 10
+field string --fieldName mac --notNull --sizeMax 17 --sizeMin 17
+field string --fieldName mobile --regexp ^1[3|4|5|7|8][0-9]{9}$ --notNull 
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-10-23 17:39:42
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-10-23 20:36:59
+web mvc controller --all 
+web mvc controller --all --responseType THYMELEAF
+web mvc finder --all --responseType THYMELEAF
+finder add --entity ~.domain.Attendance --name findBySignInAfterAndSignOutBefore --formBean ~.domain.AttendanceSignInAndSignOutFormBean 
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-10-23 20:45:49
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-10-23 20:46:03
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-10-23 22:41:05
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-10-23 22:41:54
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-10-23 23:12:18
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-10-24 21:11:31
+backup
+backup
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-10-24 22:52:26
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-10-25 21:23:47
+backup
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-10-25 21:58:52
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-10-29 21:45:45
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-10-29 21:50:31
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-10-29 21:51:02
+focus --class ~.domain.Attendance
+// [failed] field date --fieldName signIn --type java.util.Calendar --notNull --dateTimeFormatPattern yyyy-MM-dd
+field date --fieldName signIn --type java.util.Calendar --notNull --dateTimeFormatPattern yyyy-MM-dd --force 
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-10-29 22:02:25
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-10-29 22:02:38
+backup
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-10-29 22:55:48
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-10-31 20:59:45
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-10-31 23:33:44
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-11-02 22:57:35
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-11-02 22:59:18
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-11-02 22:59:28
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-11-02 23:06:16
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-11-02 23:06:25
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-11-03 08:57:06
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-11-03 08:57:16
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-11-03 08:58:29
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-11-03 08:58:38
+backup
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-11-04 07:47:46
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-11-05 11:16:26
+dto --class ~.domain.AttendanceSignInFormBean 
+field date --fieldName signIn --type java.util.Date
+// [failed] finder add --entity ~.domain.Attendance --name findBySignInBetween --formBean ~.domain.AttendanceSignInFormBean 
+focus --class ~.domain.AttendanceSignInFormBean
+field date --fieldName signIn --type java.util.Calendar --dateTimeFormatPattern yyyy-MM-dd --force 
+finder add --entity ~.domain.Attendance --name findBySignInBetween --formBean ~.domain.AttendanceSignInFormBean 
+web mvc finder --all 
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-11-05 16:40:42
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-11-05 16:40:50
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-11-05 16:43:24
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-11-05 16:43:33
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-11-05 16:47:27
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-11-05 16:47:33
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-11-05 16:49:46
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-11-05 16:49:53
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-11-05 16:51:40
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-11-05 16:51:47
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-11-05 16:53:16
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-11-05 16:53:23
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-11-05 16:54:31
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-11-05 16:54:36
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-11-05 16:57:07
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-11-05 16:57:15
+quit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2017-11-05 16:59:00
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2017-11-05 16:59:05

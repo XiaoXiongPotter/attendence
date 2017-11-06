@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-layout}">
+    <head id="head">
+
+    <title data-th-text="#{welcome_label}">Welcome - SpringRoo Application</title>
+
+  </head>
+
+  <body class="home" id="body"  data-z="user-managed">
+
+      <!-- CONTAINER -->
+      <div class="container bg-container">
+        <!-- CONTENT -->
+        <!--
+          Only the inner content of the following tag "section" is included
+          within the template, in the section "content"
+        -->
+        <section data-layout-fragment="content">
+          <div class="container-fluid content">
+   <a href="attendances/signIn" data-th-title="#{label_attendance_signin}" target="_blank"  data-th-text="#{label_attendance_signin}" hidden="true">signin</a>
+   
+   <a href="attendances/signOut" data-th-title="#{label_attendance_signout}" target="_blank"  data-th-text="#{label_attendance_signout}" hidden="true">signout</a>
+    
+ <label for="hint" class="col-md-3 control-label" data-th-text="${hint}">hint</label>
+          </div>
+        </section>
+        <!-- /CONTENT -->
+      </div>
+      <!-- /CONTAINER -->
+
+      <footer class="container">
+        <!-- Content replaced by layout of the page displayed -->
+      </footer>
+
+      <!-- JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so that the pages load faster -->
+      <!-- JavaScript loaded by layout of the page displayed -->
+      <!--
+           Only the inner content of the following tag "javascript" is included
+           within the template, in the div "javascript"
+          -->
+      <div data-layout-fragment="javascript">
+      </div>
+
+  </body>
+
+</html>
